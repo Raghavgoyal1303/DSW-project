@@ -1,0 +1,108 @@
+.page4 {
+    height: 110vh;
+    width: 100vw;
+    background-color: #F7F7F7;
+    /* id: "page4"; add this line */
+    display: flex;
+    flex-direction: column;
+}
+.on-going-events2{
+    padding-top:5rem ;
+    /* margin-top: 100px; */
+    margin-left: 40rem;
+    width: 20rem;
+    height: 4rem;
+    font-size: 2rem;
+    /* background-color: #000; */
+}
+.page4-images{
+    position: relative;
+    overflow-x: hidden;
+    height: 80%;
+    width: 100%;
+    /* background-color: #000; */
+    margin-top: 5rem;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+.page4-left-arrow-button{
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border-radius:50%;
+    font-size: 10 px;
+    margin-left: 5%;
+    border: 1px solid black;
+  }
+.page4-left-arrow-button:hover{
+    background: #000;
+    color: #fff;
+}
+.page4-right-arrow-button{
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: 90%;
+}
+.page4-right    -arrow-button:hover{
+    background: #000;
+    color: #fff;
+}
+.page4-image1, .page4-image2, .page4-image3, .page4-image4{
+    margin-top: 5%;
+    width: 15%;
+    height: 25%;
+    /* float: left; */
+    /* margin: 10px; */
+    background-color: red;
+}
+.page4-image1{
+    background: url(images/page4-image1.jpg);
+    background-size: cover;
+    margin-left: -5%;
+    height: 80%;
+    width: 40%;
+    margin-left: 25%;
+    border-radius: 50px;
+}
+.page4-image2{
+    background: url(images/page4-image2.jpg);
+    background-size: cover;
+    margin-left: -13%;
+    height: 80%;
+    width: 40%;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}
+.page4-image3{
+    background: url(images/page4-image3.jpg);
+    background-size: cover;
+    margin-left: -13%;
+    height: 80%;    
+    width: 40%;
+    background-size: 100% 100%;
+    border-radius: 50px;
+    border: none;
+}
+.page4-image4{
+    background: url(images/page4-image4.jpg);
+    background-size: cover;
+    margin-left: -13%;
+    height: 80%;
+    width: 40%;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}

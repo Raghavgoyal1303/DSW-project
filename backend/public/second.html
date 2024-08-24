@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            overflow-x: hidden;
+        }
+        .home{
+            background: lightpink;
+            opacity: 10;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .middle-box{
+            height: 60vh;
+            width: 100vw;
+            /* background: #000; */
+            margin-top: 20vh;
+            display: flex;
+        }
+        .firstblock{
+            height: 50vh;
+            width: 20vw;
+            /* background: red; */
+            margin: 30px 100px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .secondblock{
+            height: 50vh;
+            width: 20vw;
+            /* background: red; */
+            margin: 30px 100px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .thirdblock{
+            height: 50vh;
+            width: 20vw;
+            /* background: red; */
+            margin: 30px 100px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .round-photo{
+            height: 25vh;
+            width: 25vh;
+            background: #000;
+            margin-top: -10% ;
+            border-radius: 50%;
+        }
+        .block-name{
+            height: 7vh;
+            width: 30vh;
+            background: #000;
+            margin-top: 10%; 
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-weight: 600;
+        }
+
+
+        /* navbar */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    /* padding-top: 1rem ; */
+    top: 0;
+    left: 0;
+    background-color: #1f1c1c;
+}
+.Right-Parts{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    /* padding: 5px;     */
+}
+.Home{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;   
+}
+.Home:hover{
+    text-decoration: underline;
+}
+.About-us{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.About-us:hover{
+    color:red ;
+    text-decoration: underline;
+}
+.about-us-box {
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    visibility:hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+.about-us-box.visible {
+    visibility: visible;
+    opacity: 1;
+}
+.student-services{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.student-services:hover{
+    text-decoration: underline;
+}
+.contact-us{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.contact-us:hover{
+    text-decoration: underline;
+}
+.our-placements{
+    margin-right: 30px;
+    color: #fff; 
+    font-weight: 600;
+}
+.our-placements:hover{
+    text-decoration: underline;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="navbar">
+            <img src="images/cgc-logo2.jpeg" height="50px" width=" 150px" style="margin-bottom: 1rem;" >
+         <div class="Right-Parts">
+            <div class="Home">Home</div>
+             <div class="About-us">About-Us
+                <div class="about-us-box">
+                    <p>This is the about us box</p>
+                </div>
+             </div>
+             <div class="student-services">Student Services</div>
+             <div class="contact-us">Contact-Us</div>
+             <div class="our-placements">Our-Placement</div>
+        </div>
+    </div>
+            <div class="middle-box">
+                <div class="firstblock">
+                    <div class="round-photo"></div>
+                    <div class="block-name">
+                        Head of Department
+                    </div>
+                </div>
+                <div class="secondblock">
+                    <div class="round-photo"></div>
+                    <div class="block-name">
+                        Faculty Members
+                    </div>
+                </div>
+                <div class="thirdblock">
+                    <div class="round-photo"></div>
+                    <div class="block-name">
+                        Group Members
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</body>
+</html>

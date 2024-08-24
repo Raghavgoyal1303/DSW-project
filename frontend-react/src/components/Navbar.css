@@ -1,0 +1,99 @@
+.navbar{
+    /* position: fixed; */
+    margin-top: -4.9%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    /* padding-top: 1rem ; */
+    top: 0;
+    left: 0;
+    background-color: #1f1c1c;
+}
+.Right-Parts{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    /* padding: 5px;     */
+}
+.Home{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;   
+}
+.Home:hover{
+    text-decoration: underline;
+}
+.About-us{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.About-us:hover{
+    color:red ;
+    text-decoration: underline;
+}
+.about-us-box {
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    visibility:hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+.about-us-box.visible {
+    visibility: visible;
+    opacity: 1;
+}
+.student-services{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.student-services:hover{
+    text-decoration: underline;
+}
+.contact-us{
+    margin-right: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+.contact-us:hover{
+    text-decoration: underline;
+}
+.our-placements{
+    margin-right: 30px;
+    color: #fff; 
+    font-weight: 600;
+}
+.our-placements:hover{
+    text-decoration: underline;
+}
+.get-started{
+    /* margin-right: -100px; */
+    margin-left: 15rem;
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: -1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.1s ease-in-out;
+    font-weight: 600;
+}
+.get-started:hover {
+    background-color: #CBC3E3;
+    color: white;
+    font-weight: 600;
+}

@@ -1,0 +1,175 @@
+.page3{
+    height: 280vh;
+    width: 100vw;
+    background-color: #1f1c1c;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.SWS2{
+    padding: 4rem 15rem ;
+}
+.page3-content{
+    width:75%;
+    height: 3%;
+    /* background-color:#fff; */
+    align-items: center;
+    justify-content: center;
+    margin: -1% 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+
+    /* padding: 5% 5%; */
+}
+.st-word{
+    font-family: Darkergrotesque, sans-serif;
+    font-size: 180px;
+    /* font-weight: 500; */
+    color: #fff;
+    /* line-height: 186.796px; */
+    vertical-align:baseline;
+    letter-spacing:-8px;
+    word-spacing:0px;
+
+}
+.nd-word{
+    /* line-height: 186.796px; */
+    margin-top: -20px;
+    vertical-align:baseline;
+    letter-spacing:-8px;
+    word-spacing:0px;
+    font-size: 150px;
+    color: #fff;
+    /* font-weight: 600 ; */
+}
+.rd-word{
+    line-height: -1000px;
+    font-size:180px;
+    margin-top: -50px;
+    /* font-weight: 600; */
+    color: #fff;
+}
+.page3-button{
+    /* padding-top: 10%; */
+    margin: 40% 45%;
+    width: 9%;
+    height: 3.5%;
+    background-color: #ffff;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.page3-button:hover{
+    background-color: #CBC3E3;
+    color: white;
+    font-weight: 600;
+}
+.page3-images {
+    position: relative;
+    overflow-x: hidden;
+    /* padding: 0 20px; */
+    margin-top: -30% ;
+    height: 40%;
+    width: 100%;
+    /* background: #000; */
+    display: flex;
+  }
+.left-arrow-button{
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border-radius:50%;
+    font-size: 10 px;
+    margin-left: 5%;
+    border: 1px solid black;
+  }
+.left-arrow-button:hover{
+    background: #000;
+    color: #fff;
+}
+.right-arrow-button {
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: 90%;
+}
+.right-arrow-button:hover{
+    background: #000;
+    color: #fff;
+} 
+.image1, .image2, .image3, .image4 {
+    width: 15%;
+    height: 25%;
+    /* float: left; */
+    /* margin: 10px; */
+    background-color: red;
+  }
+.image1{
+    /* position: relative; */
+    margin-left: 15%;
+    height: 60%;
+    width: 60%;
+    background:url(images/parivartan.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+
+    /* color: wheat;     */
+}
+.image1-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+.image2{
+    margin-left: -13%;
+    height: 60%;
+    width: 60%;
+    background:url(images/athletic.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}
+.image2-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+.image3{
+    margin-left: -13%;
+    height: 60%;    
+    width: 60%;
+    background:url(images/football.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+    border: none;
+}
+.image3-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+.image4{
+    margin-left: -13%;
+    height: 60%;
+    width: 60%;
+    background:url(images/expedition.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}
+.image4-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
