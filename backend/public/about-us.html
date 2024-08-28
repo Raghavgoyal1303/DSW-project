@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x:hidden;
+        }
+        .page1 {
+            max-width: 100vw;
+            height: 100vh;
+            /* margin: 20px auto; */
+            padding: 20px;
+            background-color: #1f1f1f;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .title {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 36px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 4rem;
+        }
+        .content {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .left {
+            width: 50%;
+            padding-right: 20px;
+        }
+        .right {
+            margin-top: -1rem;
+            width: 45%;
+        }
+        .right img {
+            width: 90%;
+            height: 38rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        }
+        .left h2 {
+            font-size: 28px;
+            margin-top: 0;
+            color: #fff;
+            font-size: 2rem;
+        }
+        .left p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #666;
+        }
+
+
+         /* page2 */
+         .page2{
+            height: 100vh;
+            width: 100vw;
+        }
+        .page2-title{
+            height: 15%;
+            width: 100%;
+            font-size: 5rem;
+            text-align: center;
+            /* display: flex; */
+            font-weight: 500;
+
+        }
+    .page2-images {
+    position: relative;
+    overflow-x: hidden;
+    /* padding: 0 20px; */
+    margin-top: 10% ;
+    height: 100%;
+    width: 100%;
+    /* background: #000; */
+    display: flex;
+  }
+.left-arrow-button{
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border-radius:50%;
+    font-size: 10 px;
+    margin-left: 5%;
+    border: 1px solid black;
+  }
+.left-arrow-button:hover{
+    background: #000;
+    color: #fff;
+}
+.right-arrow-button {
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: 90%;
+}
+.right-arrow-button:hover{
+    background: #000;
+    color: #fff;
+} 
+.image1, .image2, .image3, .image4 {
+    width: 15%;
+    height: 35%;
+    /* float: left; */
+    /* margin: 10px; */
+    background-color: red;
+  }
+.image1{
+    /* position: relative; */
+    margin-left: 15%;
+    height: 70%;
+    width: 60%;
+    background:url(images/parivartan.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+
+    /* color: wheat;     */
+}
+.image1-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+.image2{
+    margin-left: -13%;
+    height: 70%;
+    width: 60%;
+    background:url(images/athletic.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}
+.image2-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+.image3{
+    margin-left: -13%;
+    height: 70%;    
+    width: 60%;
+    background:url(images/football.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+    border: none;
+}
+.image3-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+.image4{
+    margin-left: -13%;
+    height: 70%;
+    width: 60%;
+    background:url(images/expedition.jpg) ;
+    background-size: 100% 100%;
+    border-radius: 50px;
+}
+.image4-text{
+    margin-top:120% ;
+    margin-left: 20%;
+    color: #ddd;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page1">
+            <div class="title">
+                Department of Student Welfare
+            </div>
+            <div class="content">
+                <div class="left">
+                    <h2>About-Us</h2>
+                    <p>
+                        The Institute Name is a premier educational institution known for its excellence in teaching and research. Established in [Year], the institute has been at the forefront of [Field/Discipline], offering a wide range of programs at undergraduate, postgraduate, and doctoral levels.
+                    </p>
+                    <p>
+                        With a commitment to fostering innovation and creativity, the institute provides students with state-of-the-art facilities, access to distinguished faculty members, and opportunities for global exposure through various international collaborations.
+                    </p>
+                    <p>
+                        The campus is equipped with modern amenities, including well-equipped laboratories, libraries, sports facilities, and student accommodations. Our alumni have gone on to excel in various fields, making significant contributions to society and industry.
+                    </p>
+                </div>
+                <div class="right">
+                    <img src="images/headphone-boy.webp" alt="Institute Photo" height="1" width="40%">
+                </div>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="page2-title">Recent Events Covered</div>
+                <div class="page2-images">
+                    <button class="left-arrow-button">
+                        <i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="image1">
+                         <div class="image1-text">
+                            <h1>Parivartan-Events</h1>
+                         </div>
+                    </div>
+                    <div class="image2">
+                        <div class="image2-text">
+                            <h1>Athletic Meet</h1>
+                         </div>
+                    </div>
+                    <div class="image3">
+                        <div class="image3-text">
+                            <h1>Football Tournament</h1>
+                         </div>
+                    </div>
+                    <button class="right-arrow-button">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <div class="image4">
+                        <div class="image4-text">
+                            <h1>Expedition 2022</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+//gsap for image sliding in page2
+
+// Get the carousel container and images
+const carouselContainer = document.querySelector('.page2-images');
+const images = document.querySelectorAll('.page2-images > div:not(.left-arrow-button, .right-arrow-button)');
+
+// Set the initial index and animation duration
+let currentIndex = 0;
+const animationDuration = 0.5;
+
+// Add event listeners to the arrow buttons
+document.querySelector('.left-arrow-button').addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    return;
+  }
+  animateCarousel();
+});
+
+document.querySelector('.right-arrow-button').addEventListener('click', () => {
+  if(currentIndex < 0){
+    currentIndex = 0;
+  }
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  animateCarousel();
+});
+
+// Animate the carousel
+function animateCarousel() {
+  gsap.to(images, {
+    duration: animationDuration,
+    x: (index) => (index - currentIndex) *300,
+    ease: 'power2.inOut',
+  });
+}
+
+// Initialize the carousel
+animateCarousel();
+
+    </script>
+</body>
+</html>
