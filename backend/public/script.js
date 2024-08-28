@@ -158,7 +158,7 @@ document.querySelector(".page5-left-arrow-button").addEventListener('click', ()=
     if(page5_currentIndex < 0){
       return;
     }
-    page4_animateCarousel();
+    page5_animateCarousel();
 });
 
 
@@ -187,3 +187,55 @@ function page5_animateCarousel(){
 
 page5_animateCarousel();
 
+
+// page5 events registration
+
+
+document.getElementById('page5-image1').addEventListener('click', function() {
+window.location.href = 'up-coming-events-register.html'});
+ 
+
+document.getElementById('page5-image2').addEventListener('click', function() {
+window.location.href = 'up-coming-events-register.html'});
+  
+
+document.getElementById('page5-image3').addEventListener('click', function() {
+window.location.href = 'up-coming-events-register.html'});
+
+document.getElementById('page5-image4').addEventListener('click', function() {
+window.location.href = 'up-coming-events-register.html'});
+
+
+
+
+//  navbar animation
+
+document.getElementById('home').addEventListener('click', () => {
+  document.getElementById('homePage').scrollIntoView({behavior: "smooth"});
+});
+
+
+document.getElementById('about-us').addEventListener('click', ()=>{
+  document.getElementById('aboutPage').scrollIntoView({behavior: "smooth"});
+})
+
+
+
+document.getElementById('student-services').addEventListener('click', ()=>{
+  window.location.href = 'student-services.html'
+})
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('contact-us').addEventListener('click', ()=>{
+document.getElementById('page6-contact-us').scrollIntoView({behavior: "smooth"});
+})

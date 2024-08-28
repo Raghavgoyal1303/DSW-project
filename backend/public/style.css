@@ -35,6 +35,8 @@ html, body{
 }
 .navbar{
     /* position: fixed; */
+    display: flex;
+    justify-content: center;
     margin-top: -4.9%;
     display: flex;
     align-items: center;
@@ -49,9 +51,10 @@ html, body{
 }
 .Right-Parts{
     display: flex;
-    justify-content: space-between;
-    margin-left: 300px;
-    /* padding: 5px;     */
+    justify-content: center;
+    margin-left: 25rem;
+    align-items: center;
+
 }
 .Home{
     margin-right: 30px;
@@ -67,7 +70,6 @@ html, body{
     font-weight: 600;
 }
 .About-us:hover{
-    color:red ;
     text-decoration: underline;
 }
 .about-us-box {
@@ -416,7 +418,7 @@ html, body{
     color: #ddd;
 }
 .page4 {
-    height: 110vh;
+    height: 130vh;
     width: 100vw;
     background-color: #F7F7F7;
     /* id: "page4"; add this line */
@@ -474,7 +476,7 @@ html, body{
     border: 1px solid black;
     margin-left: 90%;
 }
-.page4-right    -arrow-button:hover{
+.page4-right-arrow-button:hover{
     background: #000;
     color: #fff;
 }
@@ -486,46 +488,151 @@ html, body{
     /* margin: 10px; */
     background-color: red;
 }
-.page4-image1{
+.page4-image1 {
     background: url(images/page4-image1.jpg);
     background-size: cover;
     margin-left: -5%;
-    height: 80%;
+    height: 60%;
     width: 40%;
     margin-left: 25%;
     border-radius: 50px;
+    position: relative;
+    text-align: center;
+  }
+.page4-image1:hover{
+    height: 70%;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page4-image1:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page4-image1-text{
+    margin-top:120% ;
+    /* margin-left: 10%; */
+    color: #000;
+    font-size: 2rem;
 }
 .page4-image2{
     background: url(images/page4-image2.jpg);
     background-size: cover;
     margin-left: -13%;
-    height: 80%;
+    height: 60%;
     width: 40%;
     background-size: 100% 100%;
     border-radius: 50px;
+    text-align: center;
+}
+.page4-image2:hover{
+    height: 70%;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page4-image2:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page4-image2-text{
+    margin-top:120% ;
+    /* margin-left: 10%; */
+    color: #000;
+    font-size: 2rem;
 }
 .page4-image3{
     background: url(images/page4-image3.jpg);
     background-size: cover;
     margin-left: -13%;
-    height: 80%;    
+    height: 60%;    
     width: 40%;
     background-size: 100% 100%;
     border-radius: 50px;
     border: none;
+    text-align: center;
+}
+.page4-image3:hover{
+    height: 70%;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page4-image3:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page4-image3-text{
+    margin-top:120% ;
+    /* margin-left: 10%; */
+    color: #000;
+    font-size: 2rem;
 }
 .page4-image4{
     background: url(images/page4-image4.jpg);
     background-size: cover;
     margin-left: -13%;
-    height: 80%;
+    height: 60%;
     width: 40%;
     background-size: 100% 100%;
     border-radius: 50px;
+    text-align: center;
+}
+.page4-image4:hover{
+    height: 70%;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page4-image4:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page4-image4-text{
+    margin-top:120% ;
+    /* margin-left: 30%; */
+    color: #000;
+    font-size:2rem ;
 }
 .page5{
     width: 100vw;
-    height: 150vh;  
+    height: 130vh;  
     background-color: #333;
 }
 .up-coming-events2{
@@ -548,7 +655,7 @@ html, body{
 .page5-left-arrow-button{
     background: #fff;
     position: absolute;
-    top: 45%;
+    top: 45vh;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1;
@@ -559,10 +666,14 @@ html, body{
     margin-left: 5%;
     border: 1px solid black;
   }
+  .page5-left-arrow-button:hover{
+    background: #000;
+    color: #fff;
+  }
 .page5-right-arrow-button{
     background: #fff;
     position: absolute;
-    top: 45%;
+    top: 45vh;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1;
@@ -572,10 +683,14 @@ html, body{
     border: 1px solid black;
     margin-left: 90%;
 }
+.page5-right-arrow-button:hover{
+    background: #000;
+    color: #fff;
+  }
 .page5-image1, .page5-image2, .page5-image3, .page5-image4{
     margin-top: 5%;
     width: 40%;
-    height: 60%;
+    height: 60vh;
     background-color: red;
 }
 .page5-image1{
@@ -583,24 +698,128 @@ html, body{
     background-size: cover;
     margin-left: 25%;
     border-radius: 50px;
+    text-align: center;
+}
+.page5-image1:hover{
+    height: 70vh;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page5-image1:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page5-image1-text{
+    margin-top:120% ;
+    /* margin-left: 30%; */
+    color: #000;
+    font-size:1rem ;
 }
 .page5-image2{
     background: url(images/page5-image2.jpg);
     background-size: cover;
     margin-left: -13%;
     border-radius: 50px;
+    text-align: center;
+}
+.page5-image2:hover{
+    height: 70vh;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page5-image2:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page5-image2-text{
+    margin-top:120% ;
+    /* margin-left: 30%; */
+    color: #000;
+    font-size:1rem ;
 }
 .page5-image3{
     background: url(images/page5-image3.jpg);
     background-size: cover;
     margin-left: -13%;
     border-radius: 50px;
+    text-align: center;
+}
+.page5-image3:hover{
+    height: 70vh;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page5-image3:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page5-image3-text{
+    margin-top:120% ;
+    /* margin-left: 30%; */
+    color: #000;
+    font-size: 1rem ;
 }
 .page5-image4{
     background: url(images/page5-image4.jpg);
     background-size: cover;
     margin-left: -13%;
     border-radius: 50px;
+    text-align: center;
+}
+.page5-image4:hover{
+    height: 70vh;
+    width: 45%;
+    transition: height 0.1s ease-in-out 0.1s, width 0.1s ease-in-out 0.1s;
+}
+.page5-image4:hover::after {
+    content: "click for more information";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* add this */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.page5-image4-text{
+    margin-top:120% ;
+    /* margin-left: 30%; */
+    color: #000;
+    font-size:1rem ;
 }
 .copyright{
     width: 100%;
@@ -611,7 +830,7 @@ html, body{
     align-items: center;
     justify-content: center;
 }
-.createdby{
+/* .createdby{
     color: white;
     font-weight: -1000;
 }
@@ -619,4 +838,17 @@ html, body{
     color: white;
     font-size: 30px;
     font-weight: 600;
+} */
+.page6{
+    height: 80vh;
+    width: 100vw;
+    background: #000;
+}
+.contact-us-title{
+    height: 5rem;
+    width: 100%;
+    /* background: #000; */
+    font-size: 5rem ;
+    color: #fff;
+    text-align: center;
 }
