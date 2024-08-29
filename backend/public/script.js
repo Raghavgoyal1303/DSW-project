@@ -41,48 +41,6 @@ scrollContainer.addEventListener('scroll', () => {
 
 
 
-//gsap for image sliding in page3
-
-// Get the carousel container and images
-const carouselContainer = document.querySelector('.page3-images');
-const images = document.querySelectorAll('.page3-images > div:not(.left-arrow-button, .right-arrow-button)');
-
-// Set the initial index and animation duration
-let currentIndex = 0;
-const animationDuration = 0.5;
-
-// Add event listeners to the arrow buttons
-document.querySelector('.left-arrow-button').addEventListener('click', () => {
-  currentIndex--;
-  if (currentIndex < 0) {
-    return;
-  }
-  animateCarousel();
-});
-
-document.querySelector('.right-arrow-button').addEventListener('click', () => {
-  if(currentIndex < 0){
-    currentIndex = 0;
-  }
-  currentIndex++;
-  if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-  animateCarousel();
-});
-
-// Animate the carousel
-function animateCarousel() {
-  gsap.to(images, {
-    duration: animationDuration,
-    x: (index) => (index - currentIndex) * 300,
-    ease: 'power2.inOut',
-  });
-}
-
-// Initialize the carousel
-animateCarousel();
-
 
 //Home bg image animation 
 
@@ -225,17 +183,15 @@ document.getElementById('student-services').addEventListener('click', ()=>{
   window.location.href = 'student-services.html'
 })
 
-
-
-
-
-
-
-
-
-
-
-
 document.getElementById('contact-us').addEventListener('click', ()=>{
 document.getElementById('page6-contact-us').scrollIntoView({behavior: "smooth"});
+})
+
+
+
+
+// page 3 about us Animation
+
+document.querySelector('.page3-button').addEventListener('click', () =>{
+  window.location.href="about-us.html";
 })

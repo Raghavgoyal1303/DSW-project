@@ -243,7 +243,7 @@ html, body{
     font-size: 100  px;    
 }
 .page3{
-    height: 280vh;
+    height: 120vh;
     width: 100vw;
     background-color: #1f1c1c;
     /* align-items: center; */
@@ -297,12 +297,13 @@ html, body{
 }
 .page3-button{
     /* padding-top: 10%; */
-    margin: 40% 45%;
-    width: 9%;
-    height: 3.5%;
+    margin: 35% 45%;
+    width: 10%;
+    height: 7.5%;
     background-color: #ffff;
     border-radius: 20px;
-    font-weight: 600;
+    font-weight: 1000;
+    font-size: 1.2rem;
 }
 .page3-button:hover{
     background-color: #CBC3E3;
