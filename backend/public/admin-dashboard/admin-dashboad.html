@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">User Management</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Content Management</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Dashboard Area -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                    <button>Logout</button>
+                </div>
+            </header>
+
+            <!-- Widgets for quick data overview -->
+            <section class="widgets">
+                <div class="widget">
+                    <h3>Total Users</h3>
+                    <p>500</p>
+                </div>
+                <div class="widget">
+                    <h3>Active Users</h3>
+                    <p>120</p>
+                </div>
+                <div class="widget">
+                    <h3>New Tickets</h3>
+                    <p>35</p>
+                </div>
+                <div class="widget">
+                    <h3>System Load</h3>
+                    <p>75%</p>
+                </div>
+            </section>
+
+            <!-- Charts and Reports Section -->
+            <section class="reports">
+                <div class="report">
+                    <h3>User Activity</h3>
+                    <canvas id="userActivityChart"></canvas>
+                </div>
+                <div class="report">
+                    <h3>System Performance</h3>
+                    <canvas id="systemPerformanceChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Link to Chart.js library for reports -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin-dashboard.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
