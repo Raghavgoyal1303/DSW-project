@@ -117,6 +117,7 @@ document.getElementById("get-started-home").addEventListener("click", () => {
                 // Decode the token to check the user's role
                 const payload = JSON.parse(atob(token.split('.')[1]));
                 if (payload.user.role === 'admin') {
+                    window.location.href = "admin-dashboard.html";
                     // Redirect to admin dashboard or show admin content
                     document.getElementById('message').innerText = 'Welcome, Admin!';
                 } else {
@@ -126,6 +127,7 @@ document.getElementById("get-started-home").addEventListener("click", () => {
                 console.error('Error logging in', error);
                 document.getElementById('message').innerText = 'Login failed. Please check your credentials.';
             }
+            
         });
 
 </script>
