@@ -13,13 +13,13 @@
             <img src="images/dsw-logo.jpg" height="70rem" width="70rem" style="margin-bottom:0; border-radius: 50%; margin-left: 0;" >
          <div class="Right-Parts">
             <div class="Home" id="get-started-home">Home</div>
-             <div class="About-us">About-Us
+             <div class="About-us" id="get-started-about-us">About-Us
                 <div class="about-us-box">
                     <p>This is the about us box</p>
                 </div>
              </div>
-             <div class="student-services">Student Services</div>
-             <div class="contact-us">Contact-Us</div>
+             <div class="student-services" id="get-started-student-services">Student Services</div>
+             <div class="contact-us" id="get-started-contact-us">Contact-Us</div>
              <div class="our-placements">Our-Placement</div>
         </div>
     </div>
@@ -91,6 +91,19 @@ document.getElementById("club").addEventListener("click", () => {
 
 document.getElementById("get-started-home").addEventListener("click", () => {
     window.location.href="index.html";
+});
+
+document.getElementById("get-started-about-us").addEventListener("click", () => {
+    window.location.href="index.html#aboutpage";
+});
+
+document.getElementById("get-started-student-services").addEventListener("click", () => {
+    window.location.href="student-services.html";
+});
+
+document.getElementById("get-started-contact-us").addEventListener("click", () => {
+    window.location.href="index.html#page6-contact-us";
+    // Add this script to the index.html page
 });
 
 

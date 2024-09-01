@@ -4,69 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="admin-dashboard.css"> <!-- Link to CSS -->
+    <link rel="stylesheet" href="admin-dashboard.css">
 </head>
 <body>
-    <div class="dashboard-container">
+    <div class="wrapper">
         <!-- Sidebar -->
         <nav class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="#">User Management</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Content Management</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Users</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="#">Logout</a></li>
             </ul>
         </nav>
 
-        <!-- Main Dashboard Area -->
-        <main class="main-content">
-            <header class="header">
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
                 <h1>Dashboard</h1>
-                <div class="user-info">
-                    <span>Welcome, Admin</span>
-                    <button>Logout</button>
-                </div>
             </header>
+            
+            <section class="dashboard-content">
+                <div class="toolbar">
+                    <button id="addEventBtn">Add New Event</button>
+                </div>
 
-            <!-- Widgets for quick data overview -->
-            <section class="widgets">
-                <div class="widget">
-                    <h3>Total Users</h3>
-                    <p>500</p>
-                </div>
-                <div class="widget">
-                    <h3>Active Users</h3>
-                    <p>120</p>
-                </div>
-                <div class="widget">
-                    <h3>New Tickets</h3>
-                    <p>35</p>
-                </div>
-                <div class="widget">
-                    <h3>System Load</h3>
-                    <p>75%</p>
-                </div>
+                <table id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Event rows will be dynamically added here -->
+                    </tbody>
+                </table>
             </section>
-
-            <!-- Charts and Reports Section -->
-            <section class="reports">
-                <div class="report">
-                    <h3>User Activity</h3>
-                    <canvas id="userActivityChart"></canvas>
-                </div>
-                <div class="report">
-                    <h3>System Performance</h3>
-                    <canvas id="systemPerformanceChart"></canvas>
-                </div>
-            </section>
-        </main>
+        </div>
     </div>
 
-    <!-- Link to Chart.js library for reports -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="admin-dashboard.js"></script> <!-- Link to JavaScript file -->
+    <!-- Modal for Adding Events -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Event</h2>
+            <form id="eventForm">
+                <label for="eventId">Event ID:</label>
+                <input type="text" id="eventId" name="eventId" required>
+                
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required>
+                
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+                
+                <label for="eventLocation">Event Location:</label>
+                <input type="text" id="eventLocation" name="eventLocation" required>
+                
+                <label for="eventDescription">Event Description:</label>
+                <textarea id="eventDescription" name="eventDescription" required></textarea>
+                
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin-dashboard.js"></script>
 </body>
 </html>

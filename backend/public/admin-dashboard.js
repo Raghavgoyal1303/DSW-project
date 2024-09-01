@@ -1,35 +1,46 @@
-// scripts.js
+document.addEventListener('DOMContentLoaded', function() {
+    const addEventBtn = document.getElementById('addEventBtn');
+    const eventsTable = document.getElementById('eventsTable').getElementsByTagName('tbody')[0];
+    const modal = document.getElementById('eventModal');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const eventForm = document.getElementById('eventForm');
 
-// Dummy data for the charts
-const userActivityData = {
-    labels: ['January', 'February', 'March', 'April', 'May'],
-    datasets: [{
-        label: 'User Activity',
-        data: [65, 59, 80, 81, 56],
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-    }]
-};
+    addEventBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
 
-const systemPerformanceData = {
-    labels: ['CPU', 'Memory', 'Disk'],
-    datasets: [{
-        label: 'System Load',
-        data: [80, 70, 60],
-        backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe'],
-    }]
-};
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
 
-// Rendering the charts
-const ctx1 = document.getElementById('userActivityChart').getContext('2d');
-new Chart(ctx1, {
-    type: 'line',
-    data: userActivityData,
-});
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
 
-const ctx2 = document.getElementById('systemPerformanceChart').getContext('2d');
-new Chart(ctx2, {
-    type: 'pie',
-    data: systemPerformanceData,
+    eventForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const eventId = document.getElementById('eventId').value;
+        const eventName = document.getElementById('eventName').value;
+        const eventDate = document.getElementById('eventDate').value;
+        const eventLocation = document.getElementById('eventLocation').value;
+        const eventDescription = document.getElementById('eventDescription').value;
+
+        if (eventId && eventName && eventDate && eventLocation && eventDescription) {
+            const newRow = eventsTable.insertRow();
+
+            newRow.insertCell(0).textContent = eventId;
+            newRow.insertCell(1).textContent = eventName;
+            newRow.insertCell(2).textContent = eventDate;
+            newRow.insertCell(3).textContent = eventLocation;
+            newRow.insertCell(4).textContent = eventDescription;
+
+            modal.style.display = 'none';
+            eventForm.reset();
+        } else {
+            alert('All fields are required to add a new event.');
+        }
+    });
 });
