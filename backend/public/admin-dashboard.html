@@ -9,10 +9,11 @@
 <body>
     <div class="wrapper">
         <!-- Sidebar -->
+         <div class="page1" id="page1">
         <nav class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li><a href="#">Dashboard</a></li>
+                <li id="Dashboard"><a href="#">Dashboard</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Users</a></li>
                 <li><a href="#">Settings</a></li>
@@ -23,7 +24,7 @@
         <!-- Main Content -->
         <div class="main-content">
             <header>
-                <h1>Dashboard</h1>
+                <h1>On-going Events List</h1>
             </header>
             
             <section class="dashboard-content">
@@ -74,6 +75,36 @@
                 
             </form>
         </div>
+    </div>
+
+    <div class="page2">
+        <div class="main-content">
+            <header>
+                <h1>Up-Coming Events List</h1>
+            </header>
+            
+            <section class="dashboard-content">
+                <div class="toolbar">
+                    <button id="addEventBtn">Add New Event</button>
+                </div>
+
+                <table id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Event rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
     </div>
 
     <script src="admin-dashboard.js"></script>

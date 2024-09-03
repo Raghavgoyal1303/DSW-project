@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.getElementById('Dashboard').addEventListener('click', ()=>{
+    document.getElementById('page1').scrollIntoView({behaviour: "smooth"});
+})
+
 //register for new event
 
 // document.getElementById('eventform').addEventListener('submit', async function(event){
