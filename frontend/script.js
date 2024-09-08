@@ -179,9 +179,9 @@ document.getElementById('about-us').addEventListener('click', ()=>{
 
 
 
-// document.getElementById('student-services').addEventListener('click', ()=>{
-//   window.location.href = 'student-services.html'
-// })
+document.getElementById('student-services').addEventListener('click', ()=>{
+  window.location.href = 'student-services.html'
+})
 
 document.getElementById('contact-us').addEventListener('click', ()=>{
 document.getElementById('page6-contact-us').scrollIntoView({behavior: "smooth"});
