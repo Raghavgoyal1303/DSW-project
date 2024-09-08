@@ -85,7 +85,12 @@ document.getElementById("get-started-contact-us").addEventListener("click", () =
                 const response = await axios.post('https://dsw-project-backend.onrender.com/api/auth/login', {
                     email: email,
                     password: password
-                });
+                },{
+                    withCredentials: true, // Allows cookies and other credentials to be sent
+                    headers: {
+                      'Content-Type': 'application/json'
+                    }
+                  });
 
                 // Assuming the response contains the token
                 const token = response.data.token;
