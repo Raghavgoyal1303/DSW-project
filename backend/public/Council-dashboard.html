@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="Council-dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="#courses"><i class="fas fa-book"></i> Courses</a></li>
+        <li><a href="#students"><i class="fas fa-user-graduate"></i> Students</a></li>
+        <li><a href="#attendance"><i class="fas fa-calendar-check"></i> Attendance</a></li>
+        <li><a href="#reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <div class="greeting">
+          <h1>Welcome, Professor!</h1>
+          <p>Your insights into teaching make a difference.</p>
+        </div>
+        <button id="logoutBtn" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </header>
+
+      <!-- Dashboard Cards -->
+      <section class="dashboard-cards">
+        <div class="card">
+          <h3>Manage Courses</h3>
+          <p>View, edit, and organize your courses.</p>
+          <button id="addCourseBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Add New Course</button>
+        </div>
+
+        <div class="card">
+          <h3>Student Interaction</h3>
+          <p>View student progress and manage submissions.</p>
+          <button id="viewStudentsBtn" class="btn btn-primary"><i class="fas fa-users"></i> View Students</button>
+        </div>
+
+        <div class="card">
+          <h3>Manage Attendance</h3>
+          <p>Track student attendance records.</p>
+          <button id="attendanceBtn" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Manage Attendance</button>
+        </div>
+
+        <div class="card">
+          <h3>Reports</h3>
+          <p>Analyze class performance and export reports.</p>
+          <button id="reportsBtn" class="btn btn-primary"><i class="fas fa-file-alt"></i> Generate Report</button>
+        </div>
+      </section>
+
+      <!-- Modal for Adding a Course -->
+      <div id="courseModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Add New Course</h3>
+          <input type="text" id="courseName" placeholder="Course Name">
+          <input type="text" id="courseDesc" placeholder="Course Description">
+          <button id="saveCourseBtn" class="btn btn-primary">Save Course</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Council-dashboard.js"></script>
+</body>
+</html>

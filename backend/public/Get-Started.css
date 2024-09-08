@@ -15,11 +15,12 @@ html, body{
     /* display: flex    ; */
     align-items: center;
     justify-content: center;
-    /* overflow:hidden ; */
+    /* overflow-x:hidden ; */
 }
 .page1{
     height: 100vh;
     width: 100vw;
+    overflow-x:hidden ;
 }
 .middle-box{
     height: 60vh;
@@ -171,12 +172,11 @@ text-decoration: underline;
 
 
 .page2{
-    overflow-x: hidden;
+overflow-x: hidden;
 height: 100vh;
 width: 100vw;
 background: #1f1c1c;
 align-items: center;
-/* justify-content: center; */
 display: flex;
 flex-direction: column;
 }
@@ -239,11 +239,21 @@ font-size: 5rem;
     font-weight: 500;
     margin: 0.5rem -1rem;
 }
+
+
+
+/* page3 */
+
+
+
 .page3{
-    overflow-x: hidden;
+overflow-x: hidden;
 height: 100vh;
 width: 100vw;
 background: #fff;
+align-items: center;
+display: flex;
+flex-direction: column;
 }
 .page3-title{
 width: 100%;
@@ -251,11 +261,30 @@ height: 20%;
 color: #000;
 align-items: center;
 justify-content: center;
-display: flex;
 font-size: 4.5rem;
 }
+.page3-middle-box{
+    width: 30%;
+    height: 350%;
+    /* background: red; */
+    margin-left: 30rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.page3-round-box{
+    background: url(/backend/public/images/profile-icon.png);
+    height: 12rem;
+    width: 12rem;
+    background-size:cover ;
+    border-radius: 50%;
+}
+.page3-loginButton{
+    margin-left: 10rem;
+}
 .page4{
-    overflow-x: hidden;
+overflow-x: hidden;
 height: 100vh;
 width: 100vw;
 background: #1f1c1c;

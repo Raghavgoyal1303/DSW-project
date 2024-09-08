@@ -50,45 +50,37 @@ document.getElementById('Dashboard').addEventListener('click', ()=>{
     document.getElementById('page1').scrollIntoView({behaviour: "smooth"});
 })
 
-//register for new event
+// fetching data for event
+// Function to fetch events from the backend and populate the table
+async function fetchAndRenderEvents() {
+    try {
+        const response = await fetch('http://localhost:3000/api/events');
+        if (response.ok) {
+            const events = await response.json();
+            const eventsTableBody = document.querySelector('#eventsTable tbody');
 
-// document.getElementById('eventform').addEventListener('submit', async function(event){
-//     event.preventDefault();
+            // Clear any existing rows
+            eventsTableBody.innerHTML = '';
 
-//     const eventName = document.getElementById('eventName').value;
-//     const eventDate = document.getElementById('eventDate').value;
-//     const eventLocation = document.getElementById('eventLocation').value;
-//     const eventDescription = document.getElementById('eventDescription').value;
+            // Populate table with events
+            events.forEach(event => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${event.eventId}</td>
+                    <td>${event.name}</td>
+                    <td>${new Date(event.date).toLocaleDateString()}</td>
+                    <td>${event.location}</td>
+                    <td>${event.description}</td>
+                `;
+                eventsTableBody.appendChild(row);
+            });
+        } else {
+            console.error('Failed to fetch events');
+        }
+    } catch (error) {
+        console.error('Error fetching events:', error);
+    }
+}
 
-//     const eventData = {
-//         eventName: eventName,
-//         eventDate: eventDate,
-//         eventLocation: eventLocation,
-//         eventDescription: eventDescription
-// };
-
-//     try{
-//         const response = await fetch('http://localhost:3000/api/events/register',{
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-
-//             },
-//             body: JSON.stringify(eventData),
-//         });
-
-//             if (response.ok) {
-//                 const result = await response.json();
-//                 alert('Event added successfully!');
-//                 console.log(result); // For debugging
-//             } else {
-//                 const errorData = await response.json();
-//                 alert(`Error: ${errorData.message}`);
-//             }
-
-//     }
-//     catch(error){
-//         console.error('Error:', error);
-//         alert('An error occurred while adding the event.');
-//     }
-// });
+// Call the fetchAndRenderEvents function when the page loads
+window.onload = fetchAndRenderEvents;

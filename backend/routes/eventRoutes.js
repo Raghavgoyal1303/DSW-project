@@ -2,6 +2,17 @@ const express = require('express');
 const Event = require('../model/eventModel');
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+    try {
+        const events = await Event.find(); // Fetch all events from the database
+        res.status(200).json(events);
+    } catch (error) {
+        console.error('Error fetching events:', error);
+        res.status(500).json({ message: "Error fetching events" });
+    }
+});
+
+
 
 router.post('/register', async (req, res)=>{
     const {name, date, location, description} = req.body
@@ -20,8 +31,8 @@ router.post('/register', async (req, res)=>{
        await newEvent.save();
        res.status(201).json({
         message: "Event Registered Successfully",
-        event: newEvent
-    });
+        events: newEvent,
+    });     
     }
     catch(error){
         console.error('Error registering event:', error);

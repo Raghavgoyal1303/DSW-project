@@ -108,5 +108,51 @@
     </div>
 
     <script src="admin-dashboard.js"></script>
+
+    <script>
+        document.getElementById('eventForm').addEventListener('submit', async function(event){
+    event.preventDefault();
+
+    const eventName = document.getElementById('eventName').value;
+    const eventDate = document.getElementById('eventDate').value;
+    const eventLocation = document.getElementById('eventLocation').value;
+    const eventDescription = document.getElementById('eventDescription').value;
+
+    const eventData = {
+        name: eventName,
+        date: eventDate,
+        location: eventLocation,
+        description: eventDescription
+};
+
+    try{
+        const response = await fetch('http://localhost:3000/api/events/register',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+
+            },
+            body: JSON.stringify(eventData),
+        });
+
+            if (response.ok) {
+                const result = await response.json();
+                alert('Event added successfully!');
+                console.log(result); // For debugging
+            } else {
+                const errorData = await response.json();
+                alert(`Error: ${errorData.message}`);
+            }
+
+    }
+    catch(error){
+        console.error('Error:', error);
+        alert('An error occurred while adding the event.');
+    }
+});
+    </script>
+    <script>
+        window.onload = fetchAndRenderEvents;
+    </script>
 </body>
 </html>
