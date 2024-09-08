@@ -22,7 +22,7 @@
   app.use(bodyParser.json());
 
   app.use(cors({
-    origin: 'http://127.0.0.1:5501', // Update this to your frontend's address
+    origin: 'https://dsw-project-1-frontend.onrender.com', // Update this to your frontend's address
     credentials: true
   }));
 
