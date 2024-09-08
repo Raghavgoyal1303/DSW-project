@@ -5,6 +5,8 @@
   const userRoutes = require('./routes/userRoutes');
   const eventRoutes = require('./routes/eventRoutes');
   const cors = require('cors');
+  const path = require('path');
+
 
 
   dotenv.config();
@@ -27,6 +29,18 @@
   app.get('/', (req, res) =>{
     res.send('Hello World!');
   })
+
+  // Serve static files from the "public" directory
+  app.use(express.static(path.join(__dirname, '../frontend')));
+
+  // Handle other routes (API routes)
+  app.use('/api', require('./routes/yourApiRoutes'));
+
+  // Catch-all route to serve index.html for unknown routes
+  app.get('*', (req, res) => {  
+    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+  });
+
 
   // Routes
   app.use('/api/auth', userRoutes);
