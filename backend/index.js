@@ -33,8 +33,6 @@
   // Serve static files from the "public" directory
   app.use(express.static(path.join(__dirname, '../frontend')));
 
-  // Handle other routes (API routes)
-  app.use('/api', require('./routes/yourApiRoutes'));
 
   // Catch-all route to serve index.html for unknown routes
   app.get('*', (req, res) => {  
