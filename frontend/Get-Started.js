@@ -1,4 +1,4 @@
-
+    
     
 document.getElementById("admin").addEventListener("click", () => {
   document.getElementById("page2").scrollIntoView({behavior: "smooth"});
