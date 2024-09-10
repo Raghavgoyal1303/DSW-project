@@ -234,7 +234,7 @@ font-size: 5rem;
     border-radius: 0.2;
     /* background: #000; */
 }
-#message{
+#message1{
     color: #fff;
     font-weight: 500;
     margin: 0.5rem -1rem;
@@ -274,20 +274,29 @@ font-size: 4.5rem;
     flex-direction: column;
 }
 .page3-round-box{
-    background: url(/backend/public/images/profile-icon.png);
+    background: url(/frontend/images/profile-icon.png);
     height: 12rem;
     width: 12rem;
     background-size:cover ;
+    /* background-color: #000; */
     border-radius: 50%;
 }
 .page3-loginButton{
     margin-left: 10rem;
 }
+#message2{
+    color: #fff;
+    font-weight: 500;
+    margin: 0.5rem -1rem;
+    font-size: small
+}
+
+
 .page4{
 overflow-x: hidden;
 height: 100vh;
 width: 100vw;
-background: #1f1c1c;
+background: #282121;
 }
 .page4-title{
 width: 100%;

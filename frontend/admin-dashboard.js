@@ -54,7 +54,7 @@ document.getElementById('Dashboard').addEventListener('click', ()=>{
 // Function to fetch events from the backend and populate the table
 async function fetchAndRenderEvents() {
     try {
-        const response = await fetch('https://dsw-project.onrender.com/api/events');
+        const response = await fetch('http://localhost:3000/api/events');
         if (response.ok) {
             const events = await response.json();
             const eventsTableBody = document.querySelector('#eventsTable tbody');

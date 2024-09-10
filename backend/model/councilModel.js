@@ -18,5 +18,5 @@ const councilSchema = new mongoose.Schema({
     
 })
 
-const Council = mongoose.model('Faculty', councilSchema);
+const Council = mongoose.model('Council', councilSchema);
 module.exports = Council;
