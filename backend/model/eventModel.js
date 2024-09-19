@@ -1,33 +1,11 @@
-    const mongoose = require('mongoose');
-    const {v4: uuidv4} = require('uuid');
+const mongoose = require('mongoose');
 
-    const eventSchema = new mongoose.Schema({
-        eventId:{
-            type: String,
-            required: true,
-            default:() =>  uuidv4(),
-            unique: true
-        },
-        name: {
-            type: String,
-            required: true
-        },
-        date: {
-            type: Date,
-            required: true
+const eventSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    date: { type: String, required: true },
+    location: {type: String, required: true},
+    description: { type: String, required: true },
+    image: { type: String, required: true },  // Path to image file
+});
 
-        },
-        location: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: true
-
-        }
-    });
-
-
-    const Event = mongoose.model('Event', eventSchema);
-    module.exports = Event;
+module.exports = mongoose.model('Event', eventSchema);

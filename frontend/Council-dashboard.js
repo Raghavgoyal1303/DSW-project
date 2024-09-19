@@ -40,3 +40,18 @@ document.getElementById('addCourseBtn').addEventListener('click', function () {
     alert('Generating reports...');
   });
   
+
+  // sidebar-onclick Animation
+
+
+  document.getElementById('On-Going').addEventListener('click', function(){
+    document.getElementById("page4").scrollIntoView({behavior: "smooth"})
+  })
+
+  document.getElementById('Up-Coming').addEventListener('click', function(){
+    document.getElementById("page5").scrollIntoView({behavior: "smooth"})
+  })
+
+  document.getElementById('Dashboard').addEventListener('click', function(){
+    document.getElementById("page1").scrollIntoView({behavior: "smooth"})
+  })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,68 +8,186 @@
   <link rel="stylesheet" href="Council-dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
-  <div class="container">
-    <nav class="sidebar">
-      <h2>Dashboard</h2>
-      <ul>
-        <li><a href="#courses"><i class="fas fa-book"></i> Courses</a></li>
-        <li><a href="#students"><i class="fas fa-user-graduate"></i> Students</a></li>
-        <li><a href="#attendance"><i class="fas fa-calendar-check"></i> Attendance</a></li>
-        <li><a href="#reports"><i class="fas fa-chart-line"></i> Reports</a></li>
-        <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
-      </ul>
-    </nav>
+  <div class="wrapper">
+    <div class="container">
+      <nav class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+          <li id="Dashboard"><a href="#courses"><i class="fas fa-book"></i> Dashboard</a></li>
+          <li><a href="#students"><i class="fas fa-user-graduate"></i> Club Members</a></li>
+          <li><a href="#attendance"><i class="fas fa-calendar-check"></i> Attendance Reports</a></li>
+          <li id="On-Going"><a href="#reports"><i class="fas fa-chart-line" ></i> On-Going Events</a></li>
+          <li id="Up-Coming"><a href="#reports"><i class="fas fa-chart-line" ></i> Up-Coming Events</a></li>
+          <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+      </nav>
 
-    <div class="main-content">
-      <header>
-        <div class="greeting">
-          <h1>Welcome, Professor!</h1>
-          <p>Your insights into teaching make a difference.</p>
-        </div>
-        <button id="logoutBtn" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
-      </header>
+      <div class="main-content" id="page1">
+        <header>
+          <div class="greeting">
+            <h1>Welcome, Professor!</h1>
+            <p>Your insights into teaching make a difference.</p>
+          </div>
+          <button id="logoutBtn" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </header>
 
-      <!-- Dashboard Cards -->
-      <section class="dashboard-cards">
-        <div class="card">
-          <h3>Manage Courses</h3>
-          <p>View, edit, and organize your courses.</p>
-          <button id="addCourseBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Add New Course</button>
-        </div>
+        <!-- Dashboard Cards -->
+        <section class="dashboard-cards">
+          <div class="card">
+            <h3>Manage Courses</h3>
+            <p>View, edit, and organize your courses.</p>
+            <button id="addCourseBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Add New Course</button>
+          </div>
 
-        <div class="card">
-          <h3>Student Interaction</h3>
-          <p>View student progress and manage submissions.</p>
-          <button id="viewStudentsBtn" class="btn btn-primary"><i class="fas fa-users"></i> View Students</button>
-        </div>
+          <div class="card">
+            <h3>Student Interaction</h3>
+            <p>View student progress and manage submissions.</p>
+            <button id="viewStudentsBtn" class="btn btn-primary"><i class="fas fa-users"></i> View Students</button>
+          </div>
 
-        <div class="card">
-          <h3>Manage Attendance</h3>
-          <p>Track student attendance records.</p>
-          <button id="attendanceBtn" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Manage Attendance</button>
-        </div>
+          <div class="card">
+            <h3>Manage Attendance</h3>
+            <p>Track student attendance records.</p>
+            <button id="attendanceBtn" class="btn btn-primary"><i class="fas fa-clipboard-list"></i> Manage
+              Attendance</button>
+          </div>
 
-        <div class="card">
-          <h3>Reports</h3>
-          <p>Analyze class performance and export reports.</p>
-          <button id="reportsBtn" class="btn btn-primary"><i class="fas fa-file-alt"></i> Generate Report</button>
-        </div>
-      </section>
+          <div class="card">
+            <h3>Reports</h3>
+            <p>Analyze class performance and export reports.</p>
+            <button id="reportsBtn" class="btn btn-primary"><i class="fas fa-file-alt"></i> Generate Report</button>
+          </div>
+        </section>
 
-      <!-- Modal for Adding a Course -->
-      <div id="courseModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h3>Add New Course</h3>
-          <input type="text" id="courseName" placeholder="Course Name">
-          <input type="text" id="courseDesc" placeholder="Course Description">
-          <button id="saveCourseBtn" class="btn btn-primary">Save Course</button>
+        <!-- Modal for Adding a Course -->
+        <div id="courseModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add New Course</h3>
+            <input type="text" id="courseName" placeholder="Course Name">
+            <input type="text" id="courseDesc" placeholder="Course Description">
+            <button id="saveCourseBtn" class="btn btn-primary">Save Course</button>
+          </div>
         </div>
       </div>
     </div>
+    <div class="page2" id="page2"></div>
+    <div class="page3" id="page3"></div>
+    <div class="page4" id="page4">
+      <div class="navbar-page4">On-Going Events</div>
+    </div>
+    <div class="page5" id="page5">
+      <div class="navbar-page5">Up-Coming Events</div>
+      <div class="page5-main">
+        <div class="admin-dashboard">
+          <!-- <h2>Add New Event</h2> -->
+          
+          <form id="adminForm" enctype="multipart/form-data">
+              <label for="eventName">Event Name:</label>
+              <input type="text" id="eventName" name="name" required>
+  
+              <label for="eventDate">Event Date:</label>
+              <input type="date" id="eventDate" name="date" required>
+
+              <label for="eventLocaiton">Event Location:</label>
+              <input type="text" id="eventLocation" name="location" required>
+
+              <label for="eventDescription">Event Description:</label>
+              <input type="text" id="eventDescription" name="description" required>
+  
+              <label for="eventImage">Event Image:</label>
+              <input type="file" id="eventImage" name="image" accept="image/*" required>
+  
+              <button type="submit">Add Event</button>
+          </form>
+  
+          <hr>
+  </div>
+  <div class="admin-dashboard2">
+          <h3>Upcoming Events</h3>
+          <table id="eventTable" border="1" >
+              <thead>
+                  <tr>
+                      <th>Event Name</th>
+                      <th>Event Date</th>
+                      <th>Location</th>
+                      <th>Description</th>
+                      <th>Image</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Rows will be dynamically added here -->
+              </tbody>
+          </table>
+      </div>
+      </div>
+
+    </div>
   </div>
 
+
   <script src="Council-dashboard.js"></script>
+
+  <!-- upcoming-events adding in event page -->
+  <script>
+    async function displayEventsInTable() {
+            try {
+                const response = await fetch('http://localhost:5000/api/events/upcoming-events');
+                const events = await response.json();
+
+                const eventTableBody = document.querySelector('#eventTable tbody');
+                eventTableBody.innerHTML = ''; // Clear existing table rows
+
+                events.forEach(event => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${event.name}</td>
+                        <td>${event.date}</td>
+                        <td>${event.location}</td>
+                        <td>${event.description}</td>
+                        <td><img src="${event.image}" alt="${event.name}" style="width: 100px; height: auto;"></td>
+                    `;
+                    eventTableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching events:', error);
+            }
+        }
+
+        // Form submission event listener
+        document.getElementById('adminForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('name', document.getElementById('eventName').value);
+            formData.append('date', document.getElementById('eventDate').value);
+            formData.append('location', document.getElementById('eventlocation').value);
+            formData.append('description', document.getElementById('eventDescription').value);
+            formData.append('image', document.getElementById('eventImage').files[0]);
+
+            try {
+                const response = await fetch('http://localhost:5000/api/events/upload-event', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert('Event added successfully!');
+                    document.getElementById('adminForm').reset();
+                    displayEventsInTable(); // Refresh the table after adding a new event
+                } else {
+                    alert('Error adding event.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+
+        // Initial loading of the events table
+        window.onload = displayEventsInTable;
+  </script>
 </body>
+
 </html>

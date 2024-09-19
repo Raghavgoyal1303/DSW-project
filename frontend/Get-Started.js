@@ -105,7 +105,7 @@ document.getElementById('page3-loginForm').addEventListener('submit', async func
         const councilMember = response.data.councilMember;
         document.getElementById('message2').innerText = `Welcome, ${councilMember.username}!`;
 
-        window.location.href = "admin-dashboard.html";
+        window.location.href = "Council-dashboard.html";
     } catch (error) {
         console.error('Error logging in', error);
 

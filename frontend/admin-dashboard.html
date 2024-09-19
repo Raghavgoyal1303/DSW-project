@@ -4,155 +4,282 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="admin-dashboard.css">
+    <link rel="stylesheet" href="admin-dashboard.css"> <!-- Link to CSS -->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            background-color: #f2f2f2;
+            text-align: left;
+            width: 100rem;
+        }
+        th {
+            background-color: #f2f2f2;
+            width: 10rem    ;
+        }
+        td:nth-child(1), th:nth-child(1) {
+            background-color: #f0e68c;
+            width: 10px;
+            font-weight: bold;
+        }
+        td:nth-child(5), th:nth-child(5) {
+            background-color: #f0e68c;
+            width: 50px;
+            font-weight: bold;
+        }
+        .table-div{
+            align-items: end;
+            display: flex;
+            flex-direction: column;
+        
+        }
+        .add-event-button{
+            /* margin-top: ; */
+            margin-right: 2%;
+            background: purple;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
+    <div class="dashboard-container">
         <!-- Sidebar -->
-         <div class="page1" id="page1">
         <nav class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li id="Dashboard"><a href="#">Dashboard</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">User Management</a></li>
+                <li><a href="#" id="On-Going-Events">On-Going Events</a></li>
+                <li><a href="#" id="Up-Coming-Events">Up-Coming Events</a></li>
+                <li><a href="#" id="C-members">Council Members</a></li>
+                <li><a href="#" id="Attendance-reports">Attendance Reports</a></li>
             </ul>
         </nav>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <header>
-                <h1>On-going Events List</h1>
-            </header>
-            
-            <section class="dashboard-content">
-                <div class="toolbar">
-                    <button id="addEventBtn">Add New Event</button>
+        <!-- Main Dashboard Area -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                    <button>Logout</button>
                 </div>
-
-                <table id="eventsTable">
-                    <thead>
-                        <tr>
-                            <th>Event ID</th>
-                            <th>Event Name</th>
-                            <th>Date</th>
-                            <th>Location</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Event rows will be dynamically added here -->
-                    </tbody>
-                </table>
-            </section>
-        </div>
-    </div>
-
-    <!-- Modal for Adding Events -->
-    <div id="eventModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Add New Event</h2>
-            <form id="eventForm">
-                <label for="eventId">Event ID:</label>
-                <input type="text" id="eventId" name="eventId" required>
-                
-                <label for="eventName">Event Name:</label>
-                <input type="text" id="eventName" name="eventName" required>
-                
-                <label for="eventDate">Event Date:</label>
-                <input type="date" id="eventDate" name="eventDate" required>
-                
-                <label for="eventLocation">Event Location:</label>
-                <input type="text" id="eventLocation" name="eventLocation" required>
-                
-                <label for="eventDescription">Event Description:</label>
-                <textarea id="eventDescription" name="eventDescription" required></textarea>
-                
-                <button type="submit">Add Event</button>
-                
-            </form>
-        </div>
-    </div>
-
-    <div class="page2">
-        <div class="main-content">
-            <header>
-                <h1>Up-Coming Events List</h1>
             </header>
-            
-            <section class="dashboard-content">
-                <div class="toolbar">
-                    <button id="addEventBtn">Add New Event</button>
-                </div>
 
-                <table id="eventsTable">
-                    <thead>
-                        <tr>
-                            <th>Event ID</th>
-                            <th>Event Name</th>
-                            <th>Date</th>
-                            <th>Location</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Event rows will be dynamically added here -->
-                    </tbody>
-                </table>
+            <!-- Widgets for quick data overview -->
+            <section class="widgets">
+                <div class="widget">
+                    <h3>Total Users</h3>
+                    <p>500</p>
+                </div>
+                <div class="widget">
+                    <h3>Active Users</h3>
+                    <p>120</p>
+                </div>
+                <div class="widget">
+                    <h3>New Tickets</h3>
+                    <p>35</p>
+                </div>
+                <div class="widget">
+                    <h3>System Load</h3>
+                    <p>75%</p>
+                </div>
             </section>
+
+            <!-- Charts and Reports Section -->
+            <section class="reports">
+                <div class="report">
+                    <h3>User Activity</h3>
+                    <canvas id="userActivityChart"></canvas>
+                </div>
+                <div class="report">
+                    <h3>System Performance</h3>
+                    <canvas id="systemPerformanceChart"></canvas>
+                </div>
+            </section>
+    </main>
+</div>
+    <div class="page2" id="page2" >
+        <div class="page2-nav">On-Going Events</div>
+        <div class="dashboard">
+            <!-- <h1>Admin Dashboard - Event Management</h1> -->
+    
+            <!-- Button to show the form for adding an event -->
+            <button class="add-event-btn" id="showFormBtn">Add New Event</button>
+    
+            <!-- Form to add a new event -->
+            <div class="form-container" id="eventForm">
+                <h2>Add Event</h2>
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <textarea id="eventDescription" rows="4" placeholder="Event Description" required></textarea>
+                <input type="date" id="eventDate" required>
+                <input type="time" id="eventTime" required>
+                <input type="text" id="eventLocation" placeholder="Event Location" required>
+                <input type="text" id="organizerName" placeholder="Organizer Name" required>
+                <input type="number" id="eventCapacity" placeholder="Maximum Capacity" required>
+                <button id="addEventBtn">Add Event</button>
+            </div>
+    
+            <!-- Table to display the events -->
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Organizer</th>
+                        <th>Capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- New events will be added here dynamically -->
+                </tbody>
+            </table>
         </div>
     </div>
+    <div class="page3" id="page3">
+        <div class="page3-nav">Up-Coming Events</div> 
+        <div class="dashboard"></div>
+            <!-- <h1>Admin Dashboard - Event Management</h1> -->
+    
+            <!-- Button to show the form for adding an event -->
+            <button class="add-event-btn" id="showFormBtn">Add New Event</button>
+    
+            <!-- Form to add a new event -->
+            <div class="form-container" id="eventForm">
+                <h2>Add Event</h2>
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <textarea id="eventDescription" rows="4" placeholder="Event Description" required></textarea>
+                <input type="date" id="eventDate" required>
+                <input type="time" id="eventTime" required>
+                <input type="text" id="eventLocation" placeholder="Event Location" required>
+                <input type="text" id="organizerName" placeholder="Organizer Name" required>
+                <input type="number" id="eventCapacity" placeholder="Maximum Capacity" required>
+                <button id="addEventBtn">Add Event</button>
+            </div>
+    
+            <!-- Table to display the events -->
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Organizer</th>
+                        <th>Capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- New events will be added here dynamically -->
+                </tbody>
+            </table>
+        </div> 
     </div>
+    <div class="page4" id="page4">
+    <div class="page4-nav">Council Members</div>
+    <div class="dashboard2"></div>
+        <h1>Admin Dashboard - Council Members</h1>
 
-    <script src="admin-dashboard.js"></script>
+        <!-- Council Members Overview Table -->
+        <h2>Council Members Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="membersTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
 
-    <script>
-        document.getElementById('eventForm').addEventListener('submit', async function(event){
-    event.preventDefault();
+        <!-- Task Assignment Section -->
+        <h2>Task Assignments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Task</th>
+                    <th>Progress</th>
+                    <th>Deadline</th>
+                </tr>
+            </thead>
+            <tbody id="tasksTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
 
-    const eventName = document.getElementById('eventName').value;
-    const eventDate = document.getElementById('eventDate').value;
-    const eventLocation = document.getElementById('eventLocation').value;
-    const eventDescription = document.getElementById('eventDescription').value;
+        <!-- Attendance Record Section -->
+        <h2>Attendance Record</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Last Meeting Attended</th>
+                    <th>Meetings Missed</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
 
-    const eventData = {
-        name: eventName,
-        date: eventDate,
-        location: eventLocation,
-        description: eventDescription
-};
+        <!-- Event Management Participation Section -->
+        <h2>Event Management Participation</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Event Name</th>
+                    <th>Role in Event</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="eventsTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
 
-    try{
-        const response = await fetch('http://localhost:3000/api/events/register',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
+        <!-- Club Involvement Section -->
+        <h2>Club/Committee Involvement</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Member</th>
+                    <th>Club/Committee</th>
+                    <th>Events Organized</th>
+                    <th>Member Engagement</th>
+                </tr>
+            </thead>
+            <tbody id="clubsTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    
+    </div>
+    <div class="page5" id="page5">
+        <div class="page5-nav">
+                Attendance Reports 
+            </div>
+        </div>
+    </div>
+</div>
 
-            },
-            body: JSON.stringify(eventData),
-        });
-
-            if (response.ok) {
-                const result = await response.json();
-                alert('Event added successfully!');
-                console.log(result); // For debugging
-            } else {
-                const errorData = await response.json();
-                alert(`Error: ${errorData.message}`);
-            }
-
-    }
-    catch(error){
-        console.error('Error:', error);
-        alert('An error occurred while adding the event.');
-    }
-});
-    </script>
-    <script>
-        window.onload = fetchAndRenderEvents;
-    </script>
+    <!-- Link to Chart.js library for reports -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin-dashboard.js"></script> <!-- Link to JavaScript file -->
 </body>
 </html>

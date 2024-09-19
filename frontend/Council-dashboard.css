@@ -8,11 +8,14 @@
   body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
-  }
+    overflow-x: hidden;
+   }
   
   .container {
     display: flex;
     height: 100vh;
+    overflow-x: hidden;
+    width:98vw;
   }
   
   .sidebar {
@@ -20,6 +23,8 @@
     background-color: #34495e;
     color: white;
     padding: 20px;
+    position: fixed;
+    height: 100%;
   }
   
   .sidebar h2 {
@@ -51,7 +56,9 @@
   
   .main-content {
     flex: 1;
-    padding: 40px;
+    padding-left: 20%;
+    overflow-x:hidden ;
+
   }
   
   header {
@@ -172,3 +179,123 @@
     width: 100%;
   }
   
+
+  /* page2 */
+
+  .page2{
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+  }
+
+  .page3{
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+  }
+
+  .page4{
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    /* position: absolute; */
+
+  }
+  .navbar-page4{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    padding-left: 18%;
+    /* position: relative; */
+  }
+
+  .page5{
+    height: 120vh;
+    width: 100vw;
+    background: #fff;
+  }
+  .navbar-page5{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #000;
+    padding-left: 18%;
+    /* position: relative; */
+  }
+
+
+  /* page5-events-input */
+
+
+.admin-dashboard {
+    width: 25rem;
+    margin: 0 auto;
+    margin-left: 90vh;
+    /* background: #000; */
+}
+
+.admin-dashboard2{
+  width: 75vw;
+  /* background: #000; */
+  margin-left: 20%;
+}
+h3 {
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+#eventTable{
+  height: 100%;
+  width: 100%;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100px;
+    min-height: auto;
+    background-color: #000;
+}
+
+
+

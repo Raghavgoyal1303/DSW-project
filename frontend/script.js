@@ -195,3 +195,15 @@ document.getElementById('page6-contact-us').scrollIntoView({behavior: "smooth"})
 document.querySelector('.page3-button').addEventListener('click', () =>{
   window.location.href="about-us.html";
 })
+
+
+
+
+//page4 - blocks
+
+gsap.to('.page4-block1',{
+  scale: 0.7,
+  opacity: 0,
+  duration: 2,
+  delay: 5,
+})
